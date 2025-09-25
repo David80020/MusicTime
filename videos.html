@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ספריית וידאו</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 25px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .video-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    video {
+      width: 100%;
+      height: 160px;
+      max-width: 500px;
+      border-radius: 8px;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- תפריט ניווט -->
+  <nav>
+    <a href="index.html">דף הבית</a>
+    <a href="audio_files.html">עמוד השירים</a>
+    <a href="video.html">עמוד הווידאו</a>
+  </nav>
+
+  <h1>ספריית וידאו</h1>
+
+  <ul>
+    <li>
+      <p class="video-title">אמליה אוזון - שלום עליכם</p>
+       <video controls poster="thumbnails/video2.jpg">
+        <source src="videos/video1.mp4" type="video/mp4">
+      </video>
+        
+      </video>
+    </li>
+
+    <li>
+      <p class="video-title">אמליה אוזון - צל עץ תמר (cover)</p>
+      <video controls poster="thumbnails/video2.jpg">
+        <source src="videos/video2.mp4" type="video/mp4">
+      </video>
+    </li>
+
+    <li>
+      <p class="video-title">וידאו 3</p>
+      <video controls poster="thumbnails/video3.jpg">
+        <source src="videos/video3.mp4" type="video/mp4">
+      </video>
+    </li>
+  </ul>
+
+  <script>
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(video => {
+      video.addEventListener("play", () => {
+        videos.forEach(otherVideo => {
+          if (otherVideo !== video) {
+            otherVideo.pause();
+            otherVideo.currentTime = 0; // מאפס את ההתקדמות
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

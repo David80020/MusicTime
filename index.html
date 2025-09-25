@@ -1,0 +1,94 @@
+
+<!DOCTYPE HTML>
+<!-- כך הדפדפן מזהה שמדובר בקובץ HTML5–>
+
+<!--תחילת הדף, שפה וכיוון(ימין לשמאל)-->
+<html lang=he dir=rtl>
+
+    <!--כותרת-->
+   <head>
+<link rel="manifest" href="manifest.json">
+       <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+       <!--מידע וקידוד-->
+    
+       <!-- מה שמוצג בראש הדף-->
+       <title>
+           My First trying to create a web site, this is the major page
+       </title>
+   </head>
+  <style>
+
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-top: 50px;
+    }
+    p {
+      color: #555;
+      font-size: 5vw;
+      margin: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #e74c3c;
+    }
+  .button{
+  display: inline-block;       /* כדי שהקישורים יהיו ליד אחד השני */
+  background-color: hsl(174, 72%, 45%);   /* צבע ירוק */
+  color: white;                /* צבע טקסט */
+width: 65%;        /* רוחב הכפתור */
+  height: 70px;        /* גובה הכפתור */
+  line-height: 60px;   /* מרכז את הטקסט אנכית */
+  text-align: center;  /* מרכז את הטקסט אופקית */
+  padding: 12px 24px;          /* רווח פנימי */
+  border-radius: 30px;         /* פינות מעוגלות */
+  font-size: 5vw;             /* גודל טקסט */
+  text-decoration: none;       /* מסיר קו תחתון */
+  margin: 50px 15px 0px 15px;              /* רווח בין הכפתורים */
+  cursor: pointer;             /* סמן עכבר */
+  transition: 0.3s;            /* אנימציית מעבר חלק */
+}
+button:active {
+  transform: scale(6.95); /* מקטין מעט את הכפתור בעת לחיצה */
+}
+.button:hover {
+  background-color: #27ae60;   /* שינוי צבע בהנחת העכבר */
+}
+
+@media (max-width: 480px) {
+  .button {
+    display: block;       /* בכל שורה חדשה */
+    margin: 10px auto;    /* מרכז את הכפתור */
+    width: 80%;           /* רוחב יחסית למסך */
+  }
+  </style>
+   <body style="font-size:5vw">
+
+       <!--כותרת ראשים-->
+     <header>
+  <h1>ברוכים הבאים לאתר הנסיוני שלי</h1>
+</header>
+       <b><p style="font-size:5vw;">כאן תוכלו למצוא מידע על הדפים השונים</p></b>
+       <!--כותרת משנית לקישורים השונים-->
+       <h2>קישורים לדפים אחרים</h2>
+       <div class="button-container">
+  <a class= "button"href="videos.html" onclick="fadeOutPage(event)">סרטוני וידאו</a>
+<a class="button"href="audio_files.html" onclick="fadeOutPage(event)">האזנה למוזיקה</a>
+           <a class= "button"href="about.html" onclick="fadeOutPage(event)">אודות</a>
+          <a class= "button"href="contact.html"onclick="fadeOutPage(event)">יצירת קשר</a>
+
+      </div>
+
+   </body>
+   
+</html>

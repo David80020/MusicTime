@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="he" dir="rtl">
+<head>
+<style>
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-top: 50px;
+    }
+    p {
+      color: #555;
+      font-size: 5vw;
+      margin: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #e74c3c;
+    }
+.button {
+  display: inline-block;       /* כדי שהקישורים יהיו ליד אחד השני */
+  background-color: hsl(174, 72%, 45%);
+  color: white;                /* צבע טקסט */
+width: 65%;        /* רוחב הכפתור */
+  height: 70px;        /* גובה הכפתור */
+  line-height: 60px;   /* מרכז את הטקסט אנכית */
+  text-align: center;  /* מרכז את הטקסט אופקית */
+  padding: 12px 24px;          /* רווח פנימי */
+  border-radius: 30px;         /* פינות מעוגלות */
+  font-size: 5vw;             /* גודל טקסט */
+  text-decoration: none;       /* מסיר קו תחתון */
+  margin: 50px 15px 0px 15px;              /* רווח בין הכפתורים */
+  cursor: pointer;             /* סמן עכבר */
+  transition: 0.3s;            /* אנימציית מעבר חלק */
+}
+
+.button:hover {
+  background-color: #27ae60;   /* שינוי צבע בהנחת העכבר */
+}
+
+@media (max-width: 480px) {
+  .button {
+    display: block;       /* בכל שורה חדשה */
+    margin: 10px auto;    /* מרכז את הכפתור */
+    width: 80%;           /* רוחב יחסית למסך */
+  }
+}
+</style>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>יצירת קשר</title>
+</head>
+    <body style="font-size:5vw;">
+        <h1>דף יצירת קשר</h1>
+        <p>הדף נבנה על יד דוד מזוז</p>
+        <p><strong>052-7180020</strong></p>
+        <p><strong>davidm80020@icloud.com</strong></p>
+        <p><a class="button"href="index.html" onclick="fadeOutPage(event)">חזרה לדף הראשי</a></p>
+    </body>
+</html>

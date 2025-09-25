@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+ <h1> <title style="fontsize: vw5">האזנה למוזיקה</title></h2>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    ul {
+      list-style: none; /* מסיר נקודות */
+      padding: 0;
+      margin: 0 auto;
+      width: 100%
+      max-width: 600px; /* רוחב מקסימלי לרשימה */
+    }
+    li {
+      background-color: rgba(255,255,255,0.8);
+      border-radius: 5vw;
+      margin: 15px 0;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+      min-height: 200px;
+
+    }
+    .song-title {
+      font-size: 2.8em; /* שם השיר גדול */
+      color: #2c3e50;
+      margin: 0;
+    }
+    .artist-name {
+      font-size: 2.1em; /* שם הזמר קטן יותר */
+      color: #555;
+      margin: 5px 0 10px 0;
+    }
+    audio {
+      width: 100%;
+      height: 80px;
+      display: block
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+    a.button {
+      display: inline-block;
+      background-color: hsl(174, 72%, 45%);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>האזנה למוזיקה</h1>
+
+  <ul>
+    <li>
+      <p class="song-title">The Door</p>
+      <p class="artist-name">Teddy Swims</p>
+      <audio controls src="songs/song1.m4a"></audio>
+    </li>
+    <li>
+      <p class="song-title">Take me to church</p>
+      <p class="artist-name">Hozier</p>
+      <audio controls src="songs/song2.m4a"></audio>
+    </li>
+    <li>
+  <p class="song-title">If We Have Each Other</p>
+  <p class="artist-name">Alec Benjamin</p>
+  <audio controls src="songs/song3.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">Mystical Magical</p>
+  <p class="artist-name">Benson Boone</p>
+  <audio controls src="songs/song4.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">Shut Up</p>
+  <p class="artist-name">Alan Walker & UPSAHL</p>
+  <audio controls src="songs/song5.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 6</p>
+  <p class="artist-name">שם הזמר 6</p>
+  <audio controls src="songs/song6.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 7</p>
+  <p class="artist-name">שם הזמר 7</p>
+  <audio controls src="songs/song7.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 8</p>
+  <p class="artist-name">שם הזמר 8</p>
+  <audio controls src="songs/song8.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 9</p>
+  <p class="artist-name">שם הזמר 9</p>
+  <audio controls src="songs/song9.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 10</p>
+  <p class="artist-name">שם הזמר 10</p>
+  <audio controls src="songs/song10.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 11</p>
+  <p class="artist-name">שם הזמר 11</p>
+  <audio controls src="songs/song11.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 12</p>
+  <p class="artist-name">שם הזמר 12</p>
+  <audio controls src="songs/song12.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 13</p>
+  <p class="artist-name">שם הזמר 13</p>
+  <audio controls src="songs/song13.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 14</p>
+  <p class="artist-name">שם הזמר 14</p>
+  <audio controls src="songs/song14.m4a"></audio>
+</li>
+
+<li>
+  <p class="song-title">שיר 15</p>
+  <p class="artist-name">שם הזמר 15</p>
+  <audio controls src="songs/song15.m4a"></audio>
+</li>
+    <!-- המשך לכל 15 השירים -->
+  </ul>
+
+  <a href="index.html" class="button">חזרה לדף הבית</a>
+
+
+
+<script>
+  // מחפש את כל נגני האודיו בדף
+  const players = document.querySelectorAll("audio");
+
+  players.forEach(player => {
+    player.addEventListener("play", () => {
+      // עוצר ומאפס את כל שאר הנגנים
+      players.forEach(other => {
+        if (other !== player) {
+          other.pause();
+          other.currentTime = 0; // מאפס את ההתקדמות
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
